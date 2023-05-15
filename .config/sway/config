@@ -62,7 +62,7 @@ mouse_warping none
 # waybar
 exec_always ~/.config/waybar/launch.sh
 # KWallet -- kwallet-pam
-exec --no-startup-id /usr/lib/pam_kwallet_init
+#exec --no-startup-id /usr/lib/pam_kwallet_init
 #lock
 #exec_always --no-startup-id xautolock -time 60 -locker 'betterlockscreen -l'
 # Clipboard program KDE
@@ -82,6 +82,8 @@ exec_always --no-startup-id xrdb ~/.Xdefaults
 exec spotify
 # Res 1920x1080
 exec --no-startup-id xrandr -s 1920x1080
+
+
 # <--Gaps-->
 gaps inner 10
 gaps vertical 0
@@ -109,7 +111,7 @@ bindsym $mod+Shift+q kill
 ## Not Maintenined
 #bindsym $mod+d exec wofi --show drun
 bindsym $mod+Shift+d exec --no-startup-id i3-dmenu-desktop --dmenu="dmenu -i -fn 'Noto Sans:size=8'"
-bindsym $mod+d exec rofi -lines 12 -padding 18 -width 60 -location 0 -show drun -sidebar-mode -columns 3 -font 'Noto Sans 9'
+bindsym $mod+d exec fuzzel 
 
 # better lock screen
 bindsym $mod+x exec --no-startup-id betterlockscreen -l
@@ -121,9 +123,10 @@ input type:touchpad {
 # reload the configuration file
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
-bindsym $mod+Shift+r restart
-# exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
+#bindsym $mod+Shift+r restart
+# exit sway (logs you out of your X session)
+ bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
+# Logout
 
 # --------------- Settings -------------------#
 
