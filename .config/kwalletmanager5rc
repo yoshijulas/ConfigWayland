@@ -1,8 +1,0 @@
-[MainWindow]
-1920x1080 screen: Window-Maximized=true
-State=AAAA/wAAAAD9AAAAAAAAA6wAAAPqAAAABAAAAAQAAAAIAAAACPwAAAAA
-ToolBarsMovable=Disabled
-
-[WalletEditor]
-AlwaysShowContents=false
-SplitterSize=394,496
